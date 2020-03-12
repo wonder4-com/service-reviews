@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build:react": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.8.7",
@@ -27,6 +28,7 @@
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
+    "babel-jest": "^25.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
@@ -35,11 +37,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "jest": "^25.1.0"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./node_modules/jest-enzyme/lib/index.js"
-    ]
+    "jest": "^25.1.0",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2"
   }
 }
