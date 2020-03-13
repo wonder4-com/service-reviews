@@ -1,2 +1,8 @@
-const express = require('express');
-const db = require('./database');
+const express = require('express')
+const app = express()
+const port = 3003
+
+app.get('/reviews', (req, res) => res.send('Hello World!'))
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
