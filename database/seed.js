@@ -31,4 +31,4 @@ const seedDatabase = () => {
 }
 
 seedDatabase();
-module.exports = { seedDatabase };
+// module.exports = { seedDatabase };
