@@ -1,5 +1,6 @@
 import React from "react";
-import Star from "./Star.jsx"
+import Star from "./Star.jsx";
+import Form from "./Form.jsx";
 
 
 class SetRating extends React.Component {
@@ -7,8 +8,13 @@ class SetRating extends React.Component {
     super(props);
     this.state = {
       rating: 0,
-      hoverRating: 0
-    }
+      hoverRating: 0,
+      showForm: false
+    };
+  }
+
+  togglePop() {
+    this.setState({showForm: !this.state.showForm});
   }
 
   handleRating(value) {
@@ -38,7 +44,10 @@ class SetRating extends React.Component {
         <Star 
           key={i}
           styleClass={styleClass} 
-          onClick={() => {this.handleRating(i + 1)}} 
+          onClick={() => {
+            this.handleRating(i + 1);
+            this.togglePop();
+          }} 
           onMouseEnter={() => {this.handleHoverRating(i + 1)}}
           onMouseLeave={() => {this.handleHoverRating(0)}}
         />
@@ -53,6 +62,7 @@ class SetRating extends React.Component {
         <ul className="column input-box list">
           {stars}
         </ul>
+        {this.state.showForm ? <Form togglePop={this.togglePop.bind(this)}/> : <div></div>}
       </div>
     )
   }

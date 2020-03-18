@@ -1,10 +1,7 @@
 import React from "react";
-// import Stars from './Stars.jsx';
 import ReviewList from './ReviewList.jsx'
 import $ from 'jquery';
 import SetRating from './SetRating.jsx';
-
-
 
 class App extends React.Component {
   constructor(props) {
