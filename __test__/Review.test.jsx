@@ -12,3 +12,12 @@ const sampleReview = {
   "restuarant_id":75
 };
 
+describe('Render Tests', () => {
+  test('should render user component', () => {
+    const wrapper = shallow(
+      <Review review={sampleReview} />
+    );
+    expect(wrapper.find('.comment').text()).toBe("Quo deserunt voluptatem. Repellendus enim ab voluptatem facere. At necessitatibus impedit et quo voluptatem ut porro.");
+  });
+
+});

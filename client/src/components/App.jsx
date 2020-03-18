@@ -1,7 +1,9 @@
 import React from "react";
-import Form from './Form.jsx';
+// import Stars from './Stars.jsx';
 import ReviewList from './ReviewList.jsx'
 import $ from 'jquery';
+import SetRating from './SetRating.jsx';
+
 
 
 class App extends React.Component {
@@ -28,8 +30,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>Reviews</h3>
-        <Form />
+        <h3>Recommended Reviews</h3>
+        <SetRating />
         <ReviewList  reviews={this.state.reviews}/>
       </div>
     );

@@ -1,13 +1,15 @@
 import React from "react";
+import User from "./User.jsx"
 
 const ReviewEntry = (props) => {
+  
   return (
-    <div>
-      <div>{props.review.username}</div>
-      <div>{props.review.usercity}</div>
-      <div>{props.review.rating}</div>
-      <div>{props.review.comment}</div>
-      <div>{props.review.date}</div>
+    <div className="column">
+      <User review={props.review}/>
+      <div className="list">
+        <span>{props.review.rating}</span><span>  {props.review.date}</span>
+        <div className="comment">{props.review.comment}</div>
+      </div>
     </div>
   )
 }
