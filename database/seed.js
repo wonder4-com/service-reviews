@@ -8,7 +8,7 @@ const seedDatabase = () => {
   for (let i = 0; i < 100; i++) {
     const restaurantName = faker.company.companyName();
     // console.log(restaurantName);
-    const queryString = `INSERT INTO restuarants (name) VALUE ("${restaurantName}");`
+    const queryString = `INSERT INTO restaurants (name) VALUE ("${restaurantName}");`
     db.query(queryString);
   }
   
@@ -23,7 +23,7 @@ const seedDatabase = () => {
     const reataurantId = faker.random.number({'min': 1,'max': 100});
     // console.log(userCity);
     //STR_TO_DATE("August 10 2017", "%M %d %Y");
-    const queryString = `INSERT INTO reviews (rating, comment, date, username, usercity, restuarant_id) VALUES ("${rating}", "${comment}", STR_TO_DATE("${date}", "%m/%d/%Y"), "${username}", "${userCity}", ${reataurantId});`
+    const queryString = `INSERT INTO reviews (rating, comment, date, username, usercity, restaurant_id) VALUES ("${rating}", "${comment}", STR_TO_DATE("${date}", "%m/%d/%Y"), "${username}", "${userCity}", ${reataurantId});`
     db.query(queryString);
   }
   console.log('seeded the database!')
