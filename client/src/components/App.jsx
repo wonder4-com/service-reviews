@@ -26,6 +26,7 @@ class App extends React.Component {
   //   })
   // }
 
+
   getReviewsByRestaurant(id) {
     $.ajax({
       method: 'GET',
@@ -35,11 +36,22 @@ class App extends React.Component {
     })
   }
 
+  postReview(review) {
+    $.ajax({
+      method: 'POST',
+      url: `/api/restaurants/${review.restaurant_id}/newreview`,
+      // contentType: 'application/json',
+      data: review,
+      success: () => {this.getReviewsByRestaurant(this.state.restaurant)},
+      error: (err) => (console.log('error from post request: ', err))
+    })
+  }
+
   render() {
     return (
       <div>
         <h3>Recommended Reviews</h3>
-        <SetRating />
+        <SetRating restaurant={this.state.restaurant} postReview={this.postReview.bind(this)}/>
         <ReviewList  reviews={this.state.reviews}/>
       </div>
     );

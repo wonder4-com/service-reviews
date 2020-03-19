@@ -1,4 +1,5 @@
 import React from "react";
+import $ from 'jquery';
 import Star from "./Star.jsx";
 import Form from "./Form.jsx";
 
@@ -9,7 +10,8 @@ class SetRating extends React.Component {
     this.state = {
       rating: 0,
       hoverRating: 0,
-      showForm: false
+      showForm: false,
+      restaurantName: ''
     };
   }
 
@@ -23,6 +25,20 @@ class SetRating extends React.Component {
 
   handleHoverRating(value) {
     this.setState({hoverRating: value});
+  }
+
+  componentDidMount() {
+    // this.getReviews();
+    this.getRestaurant(this.props.restaurant);
+  }
+
+  getRestaurant(id) {
+    $.ajax({
+      method: 'GET',
+      url: `/api/restaurant/${id}`,
+      success: (content) => {this.setState({restaurantName: content})},
+      error: (err) => (console.log('error from get request: ', err))
+    })
   }
 
   render() {
@@ -59,10 +75,15 @@ class SetRating extends React.Component {
         <div className="column user">
           <img src="https://s3-media0.fl.yelpcdn.com/assets/public/empty_profile.yelp-react-component-review.yji-1f2e356daa5c4d3f196e4da56d029152.png"/>
         </div>
-        <ul className="column input-box list">
-          {stars}
-        </ul>
-        {this.state.showForm ? <Form togglePop={this.togglePop.bind(this)}/> : <div></div>}
+        <div className="input-box">
+          <ul className="rating">
+            {stars}
+          </ul>
+          <div className="restaurant">Start your review of <strong>{this.state.restaurantName}</strong></div>
+        </div>
+        {this.state.showForm ? 
+          <Form restaurant={this.props.restaurant} rating={this.state.rating} togglePop={this.togglePop.bind(this)} handleNewReview={this.props.postReview}/> 
+          : <div></div>}
       </div>
     )
   }

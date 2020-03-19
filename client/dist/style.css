@@ -25,7 +25,7 @@ ul{
   display: flex;
   /* flex-flow: row; */
   box-sizing: border-box;
-  vertical-align: top;
+  vertical-align: center;
 }
 
 .user {
@@ -35,10 +35,15 @@ ul{
 }
 
 .input-box {
-  margin-bottom: 30px;
+  text-align: center;
+  vertical-align: top;
+  width: 608px;
+  margin-left: 6px;
+  margin-bottom: 15px;
   background-color: #f5f5f5;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
+  padding-bottom: 12px;
 }
 
 .list {
@@ -46,6 +51,20 @@ ul{
   width: 608px;
   margin: 18px;
   /* vertical-align: middle; */
+}
+
+.rating{
+  display: flex;
+  margin: 10px;
+  padding-left: 210px;
+}
+
+.restaurant {
+  border-top: 1px solid #e6e6e6;
+  font-size: 14px;
+  line-height: 1.28571em;
+  color: #0073bb;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .date {
@@ -79,12 +98,6 @@ ul{
 
 .star-rating-blank {
   fill: #d8d8d8;
-}
-
-.stars-4 {
-  width: 102px;
-  height: 18px;
-  background-position: 0 -366px;
 }
 
 .comment {
