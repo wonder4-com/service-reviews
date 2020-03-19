@@ -28,8 +28,8 @@ const getReviewsByRestaurant = (id, callback) => {
 }
 
 
-// const insertReview = () => {
-
+// const insertReview = (review, callback) => {
+  
 // }
 
 module.exports = { getRecentReviews, getReviewsByRestaurant };

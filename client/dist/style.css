@@ -48,6 +48,15 @@ ul{
   /* vertical-align: middle; */
 }
 
+.date {
+  color: #666;
+  text-align: left;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.28571em;
+  vertical-align: top;
+}
+
 .star-rating-1 {
   fill: khaki;
 }
@@ -72,12 +81,17 @@ ul{
   fill: #d8d8d8;
 }
 
+.stars-4 {
+  width: 102px;
+  height: 18px;
+  background-position: 0 -366px;
+}
+
 .comment {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.28571em;
 }
-
 
 .username {
   display: inline-block;
