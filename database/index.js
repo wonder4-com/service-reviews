@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -7,12 +8,14 @@ const connection = mysql.createConnection({
   database: 'wonder4'
 });
 
+
+
 connection.connect((err) => {
   if (err) {
-    console.log('error connecting mysql', err)
+    console.log('error connecting mysql')
   } else {
     console.log('successfully connect to mysql')
   }
 })
 
-module.exports = connection;
+module.exports =  connection;

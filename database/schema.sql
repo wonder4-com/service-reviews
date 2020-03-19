@@ -4,7 +4,7 @@ CREATE DATABASE wonder4;
 
 USE wonder4;
 
-CREATE TABLE restuarants (
+CREATE TABLE restaurants (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
@@ -17,6 +17,7 @@ CREATE TABLE reviews (
   date DATE NOT NULL,
   username VARCHAR(255) NOT NULL,
   usercity VARCHAR(255) NOT NULL,
-  restuarant_id INT NOT NULL,
-  PRIMARY KEY (review_id)
+  restaurant_id INT NOT NULL,
+  PRIMARY KEY (review_id),
+  FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
 );
