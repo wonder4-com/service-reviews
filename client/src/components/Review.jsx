@@ -5,6 +5,7 @@ import stars2 from "../../../public/assets/stars-2.png";
 import stars3 from "../../../public/assets/stars-3.png";
 import stars4 from "../../../public/assets/stars-4.png";
 import stars5 from "../../../public/assets/stars-5.png";
+import Buttons from "./Buttons.jsx";
 
 const ReviewEntry = (props) => {
 
@@ -23,7 +24,7 @@ const ReviewEntry = (props) => {
   }
 
   return (
-    <div className="column">
+    <div className="column review">
       <User review={props.review}/>
       <div className="list">
         <span className="stars-4">
@@ -31,6 +32,7 @@ const ReviewEntry = (props) => {
         </span>
         <span className="date">  {postDate}</span>
         <div className="comment">{props.review.comment}</div>
+        <Buttons />
       </div>
     </div>
   )

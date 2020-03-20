@@ -51,6 +51,11 @@ ul{
   width: 608px;
   margin: 18px;
   /* vertical-align: middle; */
+
+}
+
+.review {
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .rating{
@@ -104,6 +109,8 @@ ul{
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.28571em;
+  padding: 10px 0;
+  /* margin: 12px 0; */
 }
 
 .username {
@@ -187,4 +194,35 @@ textarea {
   cursor: pointer;
   font-weight: 700;
   text-align: center;
+}
+
+.tag-blank {
+  color: #666;
+  fill: #666;
+  background: #fff;
+  border: 1px solid #ccc;
+  background-image: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+.tag-filled {
+  color: #fff;
+  fill: #fff;
+  background: #0097ec;
+  border: 1px solid #0097ec;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 6px;
 }
