@@ -17,6 +17,7 @@ CREATE TABLE reviews (
   date DATE NOT NULL,
   username VARCHAR(255) NOT NULL,
   usercity VARCHAR(255) NOT NULL,
+  avartar VARCHAR(1024) NOT NULL,
   restaurant_id INT NOT NULL,
   PRIMARY KEY (review_id),
   FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
