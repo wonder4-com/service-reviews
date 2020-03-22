@@ -2,6 +2,17 @@ import React from "react";
 import ReviewList from './ReviewList.jsx'
 import $ from 'jquery';
 import SetRating from './SetRating.jsx';
+import styled from 'styled-components';
+
+// import Header from '../styles.jsx';
+
+
+const Header = styled.h3`
+  margin-bottom: 12px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -50,7 +61,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>Recommended Reviews</h3>
+        <Header>Recommended Reviews</Header>
         <SetRating restaurant={this.state.restaurant} postReview={this.postReview.bind(this)}/>
         <ReviewList  reviews={this.state.reviews}/>
       </div>

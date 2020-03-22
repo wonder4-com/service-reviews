@@ -6,6 +6,35 @@ import stars3 from "../../../public/assets/stars-3.png";
 import stars4 from "../../../public/assets/stars-4.png";
 import stars5 from "../../../public/assets/stars-5.png";
 import Buttons from "./Buttons.jsx";
+import styled from 'styled-components';
+
+ const Date = styled.span`
+  color: #666;
+  text-align: left;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.28571em;
+  vertical-align: top;
+`;
+
+const Comment = styled.div`
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.28571em;
+  padding: 10px 0;
+`;
+
+const ReviewContainer = styled.div`
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  box-sizing: border-box;
+  vertical-align: center;
+`;
+
+const ReviewDiv = styled.div`
+  width: 608px;
+  margin: 18px;
+`;
 
 const ReviewEntry = (props) => {
 
@@ -24,19 +53,20 @@ const ReviewEntry = (props) => {
   }
 
   return (
-    <div className="column review">
+    <ReviewContainer className="column review">
       <User review={props.review}/>
-      <div className="list">
-        <span className="stars-4">
+      <ReviewDiv className="list">
+        <span>
           <img src={rating}/>
         </span>
-        <span className="date">  {postDate}</span>
-        <div className="comment">{props.review.comment}</div>
+        <Date>  {postDate}</Date>
+        <Comment className="comment">{props.review.comment}</Comment>
         <Buttons />
-      </div>
-    </div>
+      </ReviewDiv>
+    </ReviewContainer>
   )
 }
+
 
 
 
