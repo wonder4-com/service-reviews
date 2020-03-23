@@ -52,6 +52,7 @@ app.get('/api/restaurants/:id/reviews', (req, res) => {
 app.post('/api/restaurants/:id/newreview', (req, res) => {
   console.log('handleing post request for new review by restaurant', req.body)
   let review = req.body;
+  console.log('here is our request body upon making a review', req.body);
   db.insertReview(review, (err) => {
     if (err) {
       console.log('error calling db.getReviewsByRestaurant')

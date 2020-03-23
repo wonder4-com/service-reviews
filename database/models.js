@@ -38,7 +38,7 @@ const getReviewsByRestaurant = (id, callback) => {
       callback(null, results);
     }
   });
-}
+};
 
 
 const insertReview = (review, callback) => {
@@ -46,12 +46,12 @@ const insertReview = (review, callback) => {
   VALUES(${review.rating}, '${review.comment}', STR_TO_DATE("${review.date}", "%m/%d/%Y"), '${review.username}', '${review.usercity}', '${review.restaurant_id}')`;
   db.query(queryString, (err, results) => {
     if (err) {
-      console.log('error inserting review', err)
+      console.log('error inserting review', err);
     } else {
       // console.log(results);
       callback(null, results);
     }
-  })
-}
+  });
+};
 
 module.exports = { getRecentReviews, getRestaurantName, getReviewsByRestaurant, insertReview };
