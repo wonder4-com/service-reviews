@@ -1,9 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
+import Icons from './Icons.jsx'
 
 const Useravatar = styled.img`
   height: 60px;
   width: 60px;
+  border-radius: 4px;
 `;
   
 const Username = styled.div`
@@ -14,7 +16,7 @@ const Username = styled.div`
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.28571em;
-  margin: 3px;
+  margin-left: 6px;
 `;
 
 const Usercity = styled.div`
@@ -25,7 +27,7 @@ const Usercity = styled.div`
   font-size: 12px;
   line-height: 1.5em;
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  margin: 3px;
+  margin-left: 6px;
 `;
 
 const UserContainer = styled.div`
@@ -42,6 +44,7 @@ const User = (props) => {
       <div>
         <Username className="username">{props.review.username}</Username>
         <Usercity className="usercity">{props.review.usercity}</Usercity>
+        <Icons />
       </div>
     </UserContainer>
   )
