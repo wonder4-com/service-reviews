@@ -87,6 +87,7 @@ class Form extends React.Component {
       username: faker.internet.userName(),
       date: date.toLocaleDateString(),
       usercity: faker.fake('{{address.city}}, {{address.state}}'),
+      avatar: faker.image.avatar(),
       restaurant_id: this.props.restaurant
     }
     this.props.handleNewReview(review);

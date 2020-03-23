@@ -42,8 +42,8 @@ const getReviewsByRestaurant = (id, callback) => {
 
 
 const insertReview = (review, callback) => {
-  let queryString = `INSERT INTO reviews(rating, comment, date, username, usercity, restaurant_id) 
-  VALUES(${review.rating}, '${review.comment}', STR_TO_DATE("${review.date}", "%m/%d/%Y"), '${review.username}', '${review.usercity}', '${review.restaurant_id}')`;
+  let queryString = `INSERT INTO reviews(rating, comment, date, username, usercity, avatar, restaurant_id) 
+  VALUES(${review.rating}, '${review.comment}', STR_TO_DATE("${review.date}", "%m/%d/%Y"), '${review.username}', '${review.usercity}', '${review.avatar}', '${review.restaurant_id}')`;
   db.query(queryString, (err, results) => {
     if (err) {
       console.log('error inserting review', err);

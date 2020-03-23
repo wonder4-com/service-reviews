@@ -40,7 +40,7 @@ const UserContainer = styled.div`
 const User = (props) => {
   return (
     <UserContainer className="user">
-      <Useravatar className="useravatar" src={props.review.avartar}/>
+      <Useravatar className="useravatar" src={props.review.avatar}/>
       <div>
         <Username className="username">{props.review.username}</Username>
         <Usercity className="usercity">{props.review.usercity}</Usercity>
