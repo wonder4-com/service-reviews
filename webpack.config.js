@@ -7,16 +7,27 @@ module.exports = {
  },
  module: {
   rules: [
-   {
-    test: /.js$|.jsx$/,
-    exclude: /node_modules/,
-    use: {
-     loader: 'babel-loader',
-     options: {
-      presets: ['@babel/preset-react', '@babel/preset-env']
-     }
+    {
+      test: /.js$|.jsx$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-react', '@babel/preset-env']
+        }
+      },
     },
-   },
+    {
+      test: /\.(png|jpg|gif)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+        },
+      ],
+    },
   ],
  },
 };
