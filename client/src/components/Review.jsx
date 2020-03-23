@@ -29,11 +29,13 @@ const ReviewContainer = styled.div`
   display: flex;
   box-sizing: border-box;
   vertical-align: center;
+  white-space: normal;
 `;
 
 const ReviewDiv = styled.div`
   width: 608px;
   margin: 18px;
+  white-space: normal;
 `;
 
 const ReviewEntry = (props) => {
