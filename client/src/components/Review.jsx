@@ -15,25 +15,29 @@ import styled from 'styled-components';
   font-size: 14px;
   line-height: 1.28571em;
   vertical-align: top;
-`;
+  `;
 
+const ReviewContainer = styled.div`
+  box-sizing: border-box;
+  vertical-align: center;
+  white-space: normal;
+  border-bottom: 1px solid #e6e6e6;
+  width: 630px;
+`;
+  
 const Comment = styled.div`
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.28571em;
-  padding: 10px 0;
-`;
-
-const ReviewContainer = styled.div`
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  box-sizing: border-box;
-  vertical-align: center;
+  white-space: normal;
+  width: 100px;
+  left: -80px;
 `;
 
 const ReviewDiv = styled.div`
-  width: 608px;
+  width: 630px;
   margin: 18px;
+  white-space: normal;
 `;
 
 const ReviewEntry = (props) => {

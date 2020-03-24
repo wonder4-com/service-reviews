@@ -31,9 +31,8 @@ const Usercity = styled.div`
 `;
 
 const UserContainer = styled.div`
-  width: 304px;
+  width: 300px;
   margin: 18px;
-  display: flex;
 `;
 
 

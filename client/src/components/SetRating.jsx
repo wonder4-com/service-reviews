@@ -16,12 +16,12 @@ const Restaurant = styled.span`
 const StarList = styled.ul`
   list-style-type: none;
   display: flex;
-  margin: 10px;
-  padding-left: 210px;
+  margin-left: 18%;
 `;
 
 const InputSection = styled.div`
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: .5px solid lightgray;
+  width: 615px;
   margin-bottom: 20px;
   display: flex;
   box-sizing: border-box;
@@ -31,7 +31,6 @@ const InputSection = styled.div`
 const UserDiv = styled.div`
   width: 304px;
   margin: 18px;
-  display: flex;
 `;
 
 const Inputbox = styled.div`
