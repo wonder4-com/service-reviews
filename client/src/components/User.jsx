@@ -31,8 +31,14 @@ const Usercity = styled.div`
 `;
 
 const UserContainer = styled.div`
-  width: 300px;
+  background-color: green;
+  display: flex;
+  width: 400px;
+  white-space: normal;
   margin: 18px;
+`;
+
+const UserInfo = styled.div`
 `;
 
 
@@ -41,9 +47,11 @@ const User = (props) => {
     <UserContainer className="user">
       <Useravatar className="useravatar" src={props.review.avatar}/>
       <div>
+      <UserInfo>
         <Username className="username">{props.review.username}</Username>
         <Usercity className="usercity">{props.review.usercity}</Usercity>
         <Icons />
+      </UserInfo>
       </div>
     </UserContainer>
   )

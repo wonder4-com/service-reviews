@@ -50,6 +50,7 @@ const ModalContent = styled.div`
   border: 1px solid #ccc;
   cursor: text;
   max-width: 600px;
+  height: auto;
 `;
 
 const Close = styled.span`

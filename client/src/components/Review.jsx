@@ -18,11 +18,16 @@ import styled from 'styled-components';
   `;
 
 const ReviewContainer = styled.div`
+  display: flex;
+  background-color: red;
   box-sizing: border-box;
   vertical-align: center;
   white-space: normal;
   border-bottom: 1px solid #e6e6e6;
   width: 630px;
+  &.div {
+    display: inline-block;
+  }
 `;
   
 const Comment = styled.div`
@@ -30,11 +35,13 @@ const Comment = styled.div`
   font-size: 14px;
   line-height: 1.28571em;
   white-space: normal;
-  width: 100px;
-  left: -80px;
+  width: 300px;
+  padding-bottom: 20px;
+  padding-top: 5px;
 `;
 
 const ReviewDiv = styled.div`
+  background-color: blue;
   width: 630px;
   margin: 18px;
   white-space: normal;
