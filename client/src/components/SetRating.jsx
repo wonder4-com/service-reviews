@@ -3,6 +3,7 @@ import $ from 'jquery';
 import Star from "./Star.jsx";
 import Form from "./Form.jsx";
 import styled from 'styled-components';
+import style from '../styles.css.jsx';
 
 
 const Restaurant = styled.span`
@@ -86,17 +87,23 @@ class SetRating extends React.Component {
   render() {
     let stars = [];
     for (let i = 0; i < 5; i++) {
-      let styleClass = "star-rating-blank";
+      // let styleClass = "star-rating-blank";
+      let styleClass = style.starRatingBlank;
       if ((this.state.rating > i || this.state.hoverRating > i ) && (this.state.rating === 1 || this.state.hoverRating === 1)) {
-        styleClass = "star-rating-1"
+        // styleClass = "star-rating-1"
+        styleClass = style.starRating1;
       } else if ((this.state.rating > i || this.state.hoverRating > i ) && (this.state.rating === 2 || this.state.hoverRating === 2)) {
-        styleClass = "star-rating-2"
+        // styleClass = "star-rating-2"
+        styleClass = style.starRating2;
       } else if ((this.state.rating > i || this.state.hoverRating > i ) && (this.state.rating === 3 || this.state.hoverRating === 3)) {
-        styleClass = "star-rating-3"
+        // styleClass = "star-rating-3"
+        styleClass = style.starRating3;
       } else if ((this.state.rating > i || this.state.hoverRating > i ) && (this.state.rating === 4 || this.state.hoverRating === 4)) {
-        styleClass = "star-rating-4"
+        // styleClass = "star-rating-4"
+        styleClass = style.starRating4;
       } else if ((this.state.rating > i || this.state.hoverRating > i ) && (this.state.rating === 5 || this.state.hoverRating === 5)) {
-        styleClass = "star-rating-5"
+        // styleClass = "star-rating-5"
+        styleClass = style.starRating5;
       } 
       stars.push(
         <Star 
