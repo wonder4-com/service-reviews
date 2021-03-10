@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/wonder4-com/Restaurant-Information
+  - https://github.com/wonder4-com/see-all-photos-services
+  - https://github.com/wonder4-com/popular-dishes
+  - https://github.com/wonder4-com/proxy-reviews
 
 ## Table of Contents
 
