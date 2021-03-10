@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Wonder4 restaurant reviews
 
 ## Related Projects
 
